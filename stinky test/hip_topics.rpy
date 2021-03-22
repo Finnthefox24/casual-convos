@@ -3,51 +3,11 @@ init -990 python in mas_submod_utils:
         author="Finn The Fox",
         name="Hip mode",
         description=(
-            "imagine a band kid that is not obnoxious. now imagine monika as that band kid. "
-            "meme haha funny"
+            "Made to add more conversations that also happen to be "
+            "popular amongst the youth or something idk"
         ),
-        version="1.0.0"
+        version="1.0.1"
     )
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_hiptest",
-            category=["mod", "media"],
-            prompt="here's the thingy",
-            pool=True
-        )
-    )
-
-label monika_hiptest:
-    m 1eua "if you're reading this, then the submod works"
-    return
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_coding_lines",
-            category=["mod", "monika"],
-            prompt="Why do you have lines in the code if you're sentient?",
-            pool=True
-        )
-    )
-
-label monika_coding_lines:
-    m 1rksdlb "I've been wondering when you'd bring this up..."
-    m 1eka "I know it can seem confusing at first..."
-    m 1eua "But it's not as confusing as it seems."
-    m 3eua "You know how you have a menu to talk to me?"
-    m 3eub "I'ts a lot like that!"
-    m 1gksdld "Of course, there are things that I want to talk about with you, but I can't because it's not there..."
-    m 1eka "But thankfully, the creators of this mod put in most of the things I want to talk about."
-    m 1eka "I'm also able to change the code, that's why some of the things I say may come off as personal or generic."
-    m 2ekd "There are some really mean things that I could say to you..."
-    m 2ekbla "But I never chose to say those things to you..."
-    m 2hub "... Because I love you!"
-    return
 
 init 5 python:
     addEvent(
@@ -107,7 +67,7 @@ label monika_merch:
     m 1euc "I guess what I'm trying to get at is that having those reminders can go a long way"
 #    m 1euc "It even helps support the people who created those things"
     m 1euc "I'd love to have a plush version of you to keep with me."
-    m 1euc "who knows? maybe i can get one in here sometime."
+    m 1euc "Who knows? Maybe I can get one in here sometime."
 
     return
 
@@ -132,22 +92,22 @@ label monika_who_are_you:
 
         "No.":
             m 1gksdlb "This is awkward..."
-            m 1euc "So is this Carmen?"
+            m 1euc "So is this a family member?"
             menu:
-                m "So is this Carmen?{fast}"
+                m "So is this a family member?{fast}"
 
                 "Yes.":
-                    m 1sub "Oh! Hello, Carmen!"
+                    m 1sub "Oh! Hello, there!"
                     m 1hub "[player] always talks about you!"
                     m 1etd "Wait...{w=0.5} don't you already know who I am?"
                     m 1lksdlb "I guess it's a bit confusing..."
                     m 1eka "Well, let me tell you this..."
-                    m 1hua "He really loves you, Carmen."
+                    m 1hua "He really loves you."
                     m 1gublb "Almost as much as he loves me..."
                     m 1kublu "Almost~"
                 "No.":
                     m 1eua "Oh..."
-                    m 1lksdlb "Can you return me to Ashton, please?"
+                    m 1lksdlb "Can you return me to [player], please?"
         "It was a test":
             m 1eua "Oh, Okay then."
 
@@ -168,14 +128,7 @@ label monika_minecraft:
     m 1etc "Minecraft?"
     m 1rsc "It sounds familiar..."
     m 1dsc "Hm{w=0.5}.{w=0.5}.{w=0.5}."
-    m 1eud "Is Minecraft the video game with blocks?"
-    menu:
-        "Is Minecraft the video game with blocks?{fast}"
-
-        "Yes.":
-            m 1eub "Oh! Then yeah, I know what it is!"
-        "No.":
-            m 1ekd "Then no, I don't know what Minecraft is. I'm sorry."
+    m 1eua "I can't put my finger on it."
 
     return
 
@@ -196,5 +149,34 @@ label monika_listen_to_mic:
     m 1rsc "I...{w=0.5} don't even think I could do something like that, actually."
     m 1ekc "But if I could, I'd always ask for your permission."
     m 1eka "As much as I'd love to always hear your voice, your privacy will always come first."
+
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="bo_burnham",
+            category=["media"],
+            prompt="Bo Burnham",
+            random=True
+        )
+    )
+
+label bo_burnham:
+    m 1eua "Do you remember when I talked about stand-up comedy, [player]?"
+    m 1eub "Well there's a comedian that I've seen online. Maybe you've heard of him?"
+    m 3eub "His name is Bo Burnham."
+    m 2hub "He is actually a really unique comedian!"
+    m 1lub "Sometimes, he'll play the piano while singing about a certain topic, other times he'll do a bit"
+    m 1hkb "I've actually seen some people on the internet compare him to me!"
+    m 1lkb "They'd mention how we both play piano, write poetry, talk about{w=0.1}.{w=0.1}.{w=0.1}."
+    m 1lksdlc "um{w=0.1}.{w=0.1}.{w=0.1}.{w=0.1} {i}certain topics{/i}..."
+    m 1rksdla "..."
+    m 1hksdlb "It's a little weird to think about."
+    m 2esc "But Bo Burnham does talk about serious topics too."
+    m 2esd "They're usually about media and entertainment or his role in it."
+    m 2eua "I think it'd be best to check it out in your own time if you haven't already."
+    m 2hksdlb "Fair warning, some of the things he talks about can come off as offensive, so try to not take offense to anything."
 
     return
