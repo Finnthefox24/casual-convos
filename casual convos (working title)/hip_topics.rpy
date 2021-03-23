@@ -1,12 +1,12 @@
 init -990 python in mas_submod_utils:
     ei_submod = Submod(
         author="Finn The Fox",
-        name="Hip mode",
+        name="Casual Convos",
         description=(
-            "Made to add more conversations that also happen to be "
-            "popular amongst the youth or something idk"
+            "More conversations"
+            "keep your expectations low"
         ),
-        version="1.0.1"
+        version="1.0.2"
     )
 
 init 5 python:
@@ -28,110 +28,68 @@ label monika_howsyourday:
 
     return
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_merch",
-            category=["ddlc", "monika"],
-            prompt="Merchandise of Monika",
-            random=True
-        )
-    )
-
-label monika_merch:
-    m 1eud "Hey, [player]..."
-    m 1euc "You know about how there is merchandise of me and the other girls, right?"
-    m 1euc "Do you own any of them?"
-    menu:
-        m "Do you own any of them?{fast}"
-
-        "Yes.":
-            m 1hub "That's pretty cool, [player]!"
-            m 1tub "It's only of me, right?"
-            m 1hub "Ahaha~"
-            m 1hkb "I'm only joking"
-
-        "They're shipping.":
-            m 1wub "Oh!"
-            m 1hub "I bet you're really excited!"
-
-        "No.":
-            m 1euc "I see."
-
-    m 1euc "It can be comforting to have something like that."
-    #add exp later or something idk
-    m 1euc "Having something around to remind you of something or someone that you enjoy..."
-    m 1euc "Even if it's nothing specific..."
-    m 1euc "Ehehe..."
-    m 1euc "I guess what I'm trying to get at is that having those reminders can go a long way"
+#init 5 python:
+#    addEvent(
+#        Event(
+#            persistent.event_database,
+#            eventlabel="monika_merch",
+#            category=["ddlc", "monika"],
+#            prompt="Merchandise of Monika",
+#            random=True
+#        )
+#    )
+#
+#label monika_merch:
+#    m 1eud "Hey, [player]..."
+#    m 1euc "You know about how there is merchandise of me and the other girls, right?"
+#    m 1euc "Do you own any of them?"
+#    menu:
+#        m "Do you own any of them?{fast}"
+#
+#        "Yes.":
+#            m 1hub "That's pretty cool, [player]!"
+#            m 1tub "It's only of me, right?"
+#            m 1hub "Ahaha~"
+#            m 1hkb "I'm only joking"
+#
+#        "They're shipping.":
+#            m 1wub "Oh!"
+#            m 1hub "I bet you're really excited!"
+#
+#        "No.":
+#            m 1euc "I see."
+#
+#    m 1euc "It can be comforting to have something like that."
+#    #add exp later or something idk
+#    m 1euc "Having something around to remind you of something or someone that you enjoy..."
+#    m 1euc "Even if it's nothing specific..."
+#    m 1euc "Ehehe..."
+#    m 1euc "I guess what I'm trying to get at is that having those reminders can go a long way"
 #    m 1euc "It even helps support the people who created those things"
-    m 1euc "I'd love to have a plush version of you to keep with me."
-    m 1euc "Who knows? Maybe I can get one in here sometime."
-
-    return
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_who_are_you",
-            category=["mod", "monika"],
-            prompt="Who are you?",
-            pool=True
-        )
-    )
-
-label monika_who_are_you:
-    m 1etd "Huh?"
-    m 1rssdlb "It's me..."
-    m 3rksdlb "Monika...?"
-    m 3eksdlc "Is this{w=0.5}.{w=0.5}.{w=0.5}.{w=1} Not [player]?"
-    menu:
-        m "Is this... Not [player]?{fast}"
-
-        "No.":
-            m 1gksdlb "This is awkward..."
-            m 1euc "So is this a family member?"
-            menu:
-                m "So is this a family member?{fast}"
-
-                "Yes.":
-                    m 1sub "Oh! Hello, there!"
-                    m 1hub "[player] always talks about you!"
-                    m 1etd "Wait...{w=0.5} don't you already know who I am?"
-                    m 1lksdlb "I guess it's a bit confusing..."
-                    m 1eka "Well, let me tell you this..."
-                    m 1hua "He really loves you."
-                    m 1gublb "Almost as much as he loves me..."
-                    m 1kublu "Almost~"
-                "No.":
-                    m 1eua "Oh..."
-                    m 1lksdlb "Can you return me to [player], please?"
-        "It was a test":
-            m 1eua "Oh, Okay then."
-
-    return
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_minecraft",
-            category=["games"],
-            prompt="Have you heard of Minecraft?",
-            pool=True
-        )
-    )
-
-label monika_minecraft:
-    m 1etc "Minecraft?"
-    m 1rsc "It sounds familiar..."
-    m 1dsc "Hm{w=0.5}.{w=0.5}.{w=0.5}."
-    m 1eua "I can't put my finger on it."
-
-    return
-
+#    m 1euc "I'd love to have a plush version of you to keep with me."
+#    m 1euc "Who knows? Maybe I can get one in here sometime."
+#
+#    return
+# you're not supposed to see this yet. close your eyes.    
+#init 5 python:
+#    addEvent(
+#        Event(
+#            persistent.event_database,
+#            eventlabel="monika_minecraft",
+#            category=["games"],
+#            prompt="Have you heard of Minecraft?",
+#            pool=True
+#        )
+#    )
+#
+#label monika_minecraft:
+#    m 1etc "Minecraft?"
+#    m 1rsc "It sounds familiar..."
+#    m 1dsc "Hm{w=0.5}.{w=0.5}.{w=0.5}."
+#    m 1eua "I can't put my finger on it."
+#
+#    return
+# stop looking
 init 5 python:
     addEvent(
         Event(
