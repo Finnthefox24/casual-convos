@@ -20,7 +20,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_fun_facts_database,
-            eventlabel="mas_fun_slayer",
+            eventlabel="mas_fun_fact_slayer",
         ),
         code="FFF"
     )
