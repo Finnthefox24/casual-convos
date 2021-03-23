@@ -169,3 +169,40 @@ label mas_song_nothing_else_matters:
 #    m 2ekbsu "And if someday you feel like you're all alone in the world...{w=0.3}{nw}"
 #    extend 2dkbsa "I want you to remember you're not."
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_songs_database,
+            eventlabel="mas_song_feel_invincible",
+            category=[store.mas_songs.TYPE_SHORT],
+            prompt="Feel Invincible",
+            random=True,
+            aff_range=(mas_aff.NORMAL,None)
+        ),
+        code="SNG"
+    )
+
+label mas_song_feel_invincible:
+    m 2hub "{i}~You make me feel invincible~{/i}"
+    m 2dud "{i}~Earthquake, powerful~{/i}"
+    m 2dud "{i}~Just like a tidal wave~{/i}"
+    m 2wub "{i}~You make me brave~{/i}"
+    m 2hud "{i}~You're my titanium~{/i}"
+    m 1dfb "{i}~Fight song, raising up~{/i}"
+    m 1dfo "{i}~Like a roar of victory in a stadium~{/i}"
+    m 1wfb "{i}~Who can touch me 'cause I'm~{/i}"
+    m 1hfb "{i}~I'm made of fire~{/i}"
+    m 1wfb "{i}~Who can stop me tonight~{/i}"
+    m 1hfb "{i}~I'm hard wired~{/i}"
+    m 2sfb "{i}~You make me feel invincible~{/i}"
+    m 1dfa "..."
+    m 1dfa "..."
+    m 1hksdrb "whew! I got a little worked up there, didn't I?"
+    m 1eka "I guess it's because you're the one who gives me strength, [player]."
+    m 1hua "Thank you for being that person for me!"
+
+# i dunno chief, isnt metal against god (according to christians) or something?
+# it's like they only hear "satan 666 suck my dick" when they hear metal. then again, what do i know?
+# probably shouldn't be speaking for everyone
+    return

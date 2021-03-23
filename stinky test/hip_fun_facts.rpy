@@ -15,3 +15,19 @@ label mas_fun_fact_your_reality:
     #Call the end
     call mas_fun_facts_end
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_fun_facts_database,
+            eventlabel="mas_fun_slayer",
+        ),
+        code="FFF"
+    )
+
+label mas_fun_fact_slayer:
+    m 1eub "The vocalist and bassist for the thrash metal band Slayer, Tom Araya, is a catholic?"
+    m 3eua "Pretty unexpected, right?"
+    m 1eua "I guess it goes to show that people on stage aren't always the same offstage."
+    call mas_fun_facts_end
+    return
