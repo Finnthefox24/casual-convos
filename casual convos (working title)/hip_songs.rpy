@@ -196,13 +196,39 @@ label mas_song_feel_invincible:
     m 1wfb "{i}~Who can stop me tonight~{/i}"
     m 1hfb "{i}~I'm hard wired~{/i}"
     m 2sfb "{i}~You make me feel invincible~{/i}"
-    m 1dfa "..."
+    m 2dfa "..."
     m 1dfa "..."
     m 1hksdrb "whew! I got a little worked up there, didn't I?"
     m 1eka "I guess it's because you're the one who gives me strength, [player]."
     m 1hua "Thank you for being that person for me!"
 
-# i dunno chief, isnt metal against god (according to christians) or something?
-# it's like they only hear "satan 666 suck my dick" when they hear metal. then again, what do i know?
-# probably shouldn't be speaking for everyone
+# Skillet is a christian band???
+
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_songs_database,
+            eventlabel="mas_song_omae_wa_mou",
+            category=[store.mas_songs.TYPE_SHORT],
+            prompt="Omae Wa Mou",
+            random=True,
+            aff_range=(mas_aff.NORMAL,None)
+        ),
+        code="SNG"
+    )
+
+label mas_song_omae_wa_mou:
+    m 2hub "{i}~The one who started rap-tap-tapping I can feel it on my head right now~{/i}"
+    m 2ekb "{i}~I wonder, was it you? What did I ever do?~{/i}"
+    m 2dkd "{i}~I know I wanna open up my eyes but I'm afraid~{/i}"
+    m 2ekd "{i}~I'm feelin' all the warmth of the sunset, somehow it feels sad~{/i}"
+    m 1ekb "{i}~Won't you wait for me?~{/i}"
+    m 1hub "{i}~'Cause I'll just call for you all over again~{/i}"
+    m 1dua "..."
+    m 1eka "Sometimes, I get a bit anxious when I think about meeting you, [player]."
+    m 1ekc "I'd think about if you'll still be waiting for me when I finally get over there or not..."
+    m 1hub "...But you wash all of my worries away when you visit!"
+
     return

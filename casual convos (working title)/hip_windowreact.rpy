@@ -61,3 +61,35 @@ label mas_wrs_spotify:
     if not wrs_success:
         $ mas_unlockFailedWRS('mas_wrs_spotify')
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mas_wrs_discord",
+            category=['Discord'],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mas_wrs_discord:
+    $ wrs_success = display_notif(
+        m_name,
+        [
+            "Talking to your friends, [player]?",
+            "I hope everyone is being nice to each other.",
+            "I hope you don't mind if I take a look!\nat your direct messages, [player]~"
+        ],
+        'Window Reactions'
+    )
+
+    #Unlock again if we failed
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mas_wrs_discord')
+    return
