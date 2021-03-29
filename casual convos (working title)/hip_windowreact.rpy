@@ -84,7 +84,7 @@ label mas_wrs_discord:
         [
             "Talking to your friends, [player]?",
             "I hope everyone is being nice to each other.",
-            "I hope you don't mind if I take a look!\nat your direct messages, [player]~"
+            "I hope you don't mind if I take a look\nat your direct messages, [player]~"
         ],
         'Window Reactions'
     )
