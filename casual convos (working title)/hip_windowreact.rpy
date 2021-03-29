@@ -51,7 +51,7 @@ label mas_wrs_spotify:
         m_name,
         [
             "Find anything new, [player]?",
-            "Need reccomendations, [player]!",
+            "Need reccomendations, [player]?",
             "I hope you have good taste!\nAhaha!"
         ],
         'Window Reactions'
