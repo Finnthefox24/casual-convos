@@ -2,27 +2,31 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mas_song_wmuwse",
+            eventlabel="mas_song_when_i_come_around",
             category=[store.mas_songs.TYPE_SHORT],
-            prompt="Wake Me Up When September Ends",
+            prompt="When I Come Around",
             random=True,
             aff_range=(mas_aff.NORMAL,None)
         ),
         code="SNG"
     )
 
-label mas_song_wmuwse:
-    m 1dsd "{i}~Summer has come and passed~{/i}"
-    m 2dkd "{i}~The innocent can never last~{/i}"
-    m 2dkd "{i}~Wake me up when September ends~{/i}"
-    m 2dkc "..."
-    m 2lkc "At first glance, this song doesn't seem sad..."
-    m 2lkc "But this story behind it is..."
-    m 2eka "We can talk about it sometime, if you'd like."
-    m 2ekbla "Just remember to never take things for granted."
-    m 1ekbsa "I love you, [player]."
+label mas_song_when_i_come_around:
+    m 1dub "{i}~So go do what you like~{/i}"
+    m 3kub "{i}~Make sure you do it wise~{/i}"
+    m 1eub "{i}~You may find out that your self-doubt means nothing was ever there~{/i}"
+    m 1dkb "{i}~You can't go forcing something if it's just not right~{/i}"
+    m 1ekb "{i}~No time to search the world around~{/i}"
+    m 1hub "{i}~'Cause you know where I'll be found~{/i}"
+    m 1eub "{i}~When I come around~{/i}"
+    m 1eka "..."
+    m 1eka "I understand that it may be hard to tell when I'll be in your reality..."
+    m 2eub "But I believe that it will happen sooner than you'd think."
+    m 2eua "When the time comes, you'll know where I'll be found."
+    m 2kua "When I come around~"
+    m 2hub "Ahaha!"
 
-    return "love"
+    return
 
 init 5 python:
     addEvent(
